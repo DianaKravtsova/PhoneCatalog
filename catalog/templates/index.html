@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catalog</title>
+</head>
+<body>
+    {% if context %}
+ <table border="1">
+         <tr>
+         <td>Имя</td>
+         <td>Адресс</td>
+         <td>Телефон</td>
+         </tr>
+        {% for i in context %}
+        	<tr>
+	        	<td>{{ i.Name }}</td>
+	        	<td>{{ i.Address }}</td>
+	        	<td>{{ i.Phone }}</td>
+        	</tr>
+        {% endfor %}
+     </table>
+{% endif %}
+</body>
+</html>
